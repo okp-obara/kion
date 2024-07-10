@@ -33,7 +33,7 @@ temperature_info=f'{temperature}度@{timing}'
 print(temperature_info)
 
 # ジャッジ
-judgement_temperature=28.0
+judgement_temperature=27.0
 
 
 # テキストの整形
