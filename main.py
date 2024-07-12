@@ -46,7 +46,7 @@ else:
     comment = "本日は出社日よ。水分をこまめに摂って、出社中の熱中症には十分気を付けて。"
 
 # slack
-slack_data = {'text': f"おはようございます🌞\n{comment}\n\n{temperature_info}" }
+slack_data = {'text': f"おはようございます\n{comment}\n\n{temperature_info}" }
 
 slack_webhook_url = os.getenv('SLACK_WEBHOOK_URL')
 
