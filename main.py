@@ -39,11 +39,11 @@ judgement_temperature=27.0
 # テキストの整形
 comment=''
 if temperature > 30:
-    comment = "本日は在宅作業ですが熱中症には注意しましょう！"
+    comment = "本日は在宅作業よ。屋内でも熱中症になることも多いから、気を付けて。"
 elif temperature > judgement_temperature:
-    comment = "本日は暑すぎるので在宅作業にしましょう！💀💀💀"
+    comment = "ハァ……暑すぎ。今日は在宅作業をオススメするけど。"
 else:
-    comment = "本日は残念ながら出社です。熱中症に気をつけて出社しましょう。😇😇😇"
+    comment = "本日は出社日よ。水分をこまめに摂って、出社中の熱中症には十分気を付けて。"
 
 # slack
 slack_data = {'text': f"おはようございます🌞\n{comment}\n\n{temperature_info}" }
