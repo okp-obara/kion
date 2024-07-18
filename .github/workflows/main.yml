@@ -5,7 +5,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: '30 22 * 7-10 1-5'  # 毎日UTCの22時半に実行（JSTの7時半に相当）
+    - cron: '0 23 * 7-10 1-5'  # 毎日UTCの22時半に実行（JSTの8時に相当）
   workflow_dispatch:  # GitHubサイト上で手動実行をトリガーするため
 
 jobs:
