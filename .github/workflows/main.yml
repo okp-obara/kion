@@ -5,8 +5,8 @@ on:
     branches:
       - main
   schedule:
-    - cron: '0 23 * 7-10 1-5'  # 毎日UTCの22時半に実行（JSTの8時に相当）
-  workflow_dispatch:  # GitHubサイト上で手動実行をトリガーするため
+    - cron: '0 23 * 6-10 4'  # 6〜10月の金曜日、日本時間08:00に実行
+  workflow_dispatch:  # 手動実行も可能
 
 jobs:
   run-script:
@@ -19,7 +19,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.x'  # 必要なPythonバージョンを指定
+          python-version: '3.x'
 
       - name: Install dependencies
         run: |
