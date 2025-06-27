@@ -13,12 +13,6 @@ LOCATION = "東京（トウキョウ）"
 JUDGEMENT_TEMP = 27.0
 
 
-def is_target_day() -> bool:
-    """6月〜10月かつ金曜日かどうかを判定"""
-    today = datetime.now()
-    return 6 <= today.month <= 10 and today.weekday() == 4
-
-
 def fetch_temperature_data(url: str) -> pd.DataFrame:
     """気象庁CSVをDataFrameで取得"""
     response = requests.get(url)
@@ -74,10 +68,6 @@ def post_to_slack(message: str):
 
 
 def main():
-    if not is_target_day():
-        print("今日は実行対象日ではありません。終了します。")
-        sys.exit(0)
-
     try:
         df = fetch_temperature_data(JMA_URL)
         temperature, timing = extract_temperature_info(df, LOCATION)
