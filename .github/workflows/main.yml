@@ -5,7 +5,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: '0 23 * 6-10 4'  # 6〜10月の金曜日、日本時間08:00に実行
+    - cron: '0 23 * 6-10 1-5'  # 6〜10月の月曜〜金曜、日本時間08:00に実行
   workflow_dispatch:  # 手動実行も可能
 
 jobs:
